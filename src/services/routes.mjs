@@ -7,7 +7,7 @@ const defaultPath = '/';
 const defaultHash = '#' + defaultPath;
 export const routes = {
     '/': ItemList,
-    '/item-edit(/:importId)': AddItem,
+    '/item-edit(/:id)': AddItem,
 }
 
 const compiledRoutes = Object.entries(routes).map(([spec, component]) => ({ route: new Route(spec), spec, component }));

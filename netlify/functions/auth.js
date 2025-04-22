@@ -10,7 +10,7 @@ const redirectObj = {
     statusCode: 302,
     body: '',
     headers: {
-        location: '/heritage-archive-prototype/'
+        location: '/'
     }
 };
 
