@@ -7,7 +7,7 @@ const styles = css`
 `;
 
 export default {
-    name: 'WalkList',
+    name: 'ItemList',
     template: `
         <div class="container-xl">
             <div class="page-header d-print-none">

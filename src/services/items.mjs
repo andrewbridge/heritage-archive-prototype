@@ -1,8 +1,8 @@
-import { reactive } from "../deps/vue.mjs";
+import { reactive, computed } from "../deps/vue.mjs";
 
-const items = reactive([]);
+export const items = reactive([]);
 
-export default items;
+export const itemMap = computed(() => new Map(items.map(item => [item.id, item])));
 
 const itemDataResponse = await fetch('https://andrewbridge.github.io/heritage-archive-prototype/data.json').then(r => r.json());
-items.push(...itemDataResponse.walks);
+items.push(...itemDataResponse);
