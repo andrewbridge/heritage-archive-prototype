@@ -46,7 +46,7 @@ export default {
                 <div class="row g-2 align-items-center">
                     <div class="col">
                         <h2 class="page-title">
-                            Add walk
+                            {{id ? 'Update' : 'Add'}} item
                         </h2>
                     </div>
                 </div>
