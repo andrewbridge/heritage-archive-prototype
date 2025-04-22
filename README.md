@@ -1,4 +1,4 @@
-# heritage-acrhive-prototype
+# heritage-archive-prototype
 
 This is a prototype demonstrating a data set for a small village heritage archive project.
 
