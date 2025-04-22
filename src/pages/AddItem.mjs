@@ -3,8 +3,6 @@ import {css} from "../deps/goober.mjs";
 import { reactive } from "../deps/vue.mjs";
 import { items, itemMap } from "../services/items.mjs";
 
-const dmp = new diff_match_patch();
-
 const styles = css`
     .card-body > * {
         transition: 0.125s opacity ease-in-out !important;
