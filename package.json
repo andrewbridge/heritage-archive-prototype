@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "serve": "npx simplehttpserver -p 8080 .",
+    "dev": "npx live-server src --port 8080 --no-browser",
+    "dev:netlify": "netlify dev"
+  },
+  "dependencies": {
+    "@octokit/auth-oauth-app": "^5.0.4",
+    "@octokit/core": "^4.1.0",
+    "yaml": "^2.7.1"
+  }
+}
