@@ -11,7 +11,9 @@ const styles = css`
 `;
 
 const getNewItemId = () => {
-    const { id } = items.at(-1);
+    const itemsClone = Array.from(items);
+    itemsClone.sort(({ id: a }, { id: b }) => a > b ? 1 : -1);
+    const { id } = itemsClone.at(-1);
     const match = id.match(/([A-Z])(\d+)/);
     return match ? `${match[1]}${String(parseInt(match[2]) + 1).padStart(4, '0')}` : 'A0000';
 }
