@@ -9,7 +9,7 @@ export const searchIndex = new Document({
     tokenize: 'full',
     document: {
         id: 'id',
-        index: ['title', 'description', 'keywords', 'comments']
+        index: ['title', 'description', 'keywords', 'timestamp', 'type', 'comments']
     }
 });
 
