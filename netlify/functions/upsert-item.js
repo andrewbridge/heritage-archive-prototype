@@ -30,7 +30,7 @@ const updateItem = async (client, id, fileData, sha) =>
 
 exports.handler = async function(event, context) {
     const DEV = process.env.NETLIFY_DEV === 'true';
-    const { id, folder, title, description, keywords, comments } = JSON.parse(event.body);
+    const { id, folder, title, description, keywords, timestamp, comments } = JSON.parse(event.body);
     let client;
     try {
         client = await getOctokitClient(event);
@@ -56,6 +56,7 @@ exports.handler = async function(event, context) {
             title,
             description,
             keywords,
+            timestamp,
             comments,
         });
         if (sha) {

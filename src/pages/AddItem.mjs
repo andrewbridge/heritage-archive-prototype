@@ -18,7 +18,7 @@ const getNewItemId = () => {
     return match ? `${match[1]}${String(parseInt(match[2]) + 1).padStart(4, '0')}` : 'A0000';
 }
 
-const createItem = () => reactive({ id: '', folder: '', title: '', description: '', keywords: [''], comments: '' });
+const createItem = () => reactive({ id: '', folder: '', title: '', description: '', keywords: [''], timestamp: '', comments: '' });
 
 const fetchOrCreateItem = (id) => {
     const item = createItem();
@@ -127,6 +127,14 @@ export default {
                                                         <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
                                                     </svg>
                                                 </button>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Time and date information</label>
+                                            <div class="row g-2 mb-3">
+                                                <div class="col-4">
+                                                    <input type="text" class="form-control" placeholder="Time and date" v-model="item.timestamp" />
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="mb-3">

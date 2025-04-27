@@ -49,7 +49,8 @@ export default {
                                     <col span="1" style="width: 7%;">
                                     <col span="1" style="width: 40%;">
                                     <col span="1" style="width: 15%;">
-                                    <col span="1" style="width: 23%;">
+                                    <col span="1" style="width: 10%;">
+                                    <col span="1" style="width: 13%;">
                                     <col span="1" style="width: 7%;">
                                 </colgroup>
                                 <thead>
@@ -58,6 +59,7 @@ export default {
                                         <th>Folder</th>
                                         <th>Details</th>
                                         <th>Keywords</th>
+                                        <th>Time and date</th>
                                         <th>Comments</th>
                                         <th class="w-1"></th>
                                     </tr>
@@ -73,6 +75,7 @@ export default {
                                             </div>
                                         </td>
                                         <td>{{item.keywords.join(', ')}}</td>
+                                        <td>{{item.timestamp}}</td>
                                         <td class="text-secondary">
                                             <p v-for="line in item.comments.split('\\n')">{{ line }}</p>
                                         </td>
