@@ -61,6 +61,7 @@ export default {
                                         <th>Details</th>
                                         <th>Keywords</th>
                                         <th>Time and date</th>
+                                        <th>Type</th>
                                         <th>Comments</th>
                                         <th class="w-1"></th>
                                     </tr>
