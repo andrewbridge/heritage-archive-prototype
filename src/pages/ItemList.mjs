@@ -75,7 +75,9 @@ export default {
                                             </div>
                                         </td>
                                         <td>{{item.keywords.join(', ')}}</td>
-                                        <td>{{item.timestamp}}</td>
+                                        <td>
+                                            <p v-for="line in item.timestamp.split('\\n')">{{ line }}</p>
+                                        </td>
                                         <td class="text-secondary">
                                             <p v-for="line in item.comments.split('\\n')">{{ line }}</p>
                                         </td>
