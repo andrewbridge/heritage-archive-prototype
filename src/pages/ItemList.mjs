@@ -47,8 +47,9 @@ export default {
                                 <colgroup>
                                     <col span="1" style="width: 7%;">
                                     <col span="1" style="width: 7%;">
-                                    <col span="1" style="width: 40%;">
+                                    <col span="1" style="width: 30%;">
                                     <col span="1" style="width: 15%;">
+                                    <col span="1" style="width: 10%;">
                                     <col span="1" style="width: 10%;">
                                     <col span="1" style="width: 13%;">
                                     <col span="1" style="width: 7%;">
@@ -77,6 +78,9 @@ export default {
                                         <td>{{item.keywords.join(', ')}}</td>
                                         <td>
                                             <p v-for="line in item.timestamp.split('\\n')">{{ line }}</p>
+                                        </td>
+                                        <td>
+                                            <p v-for="line in item.type.split('\\n')">{{ line }}</p>
                                         </td>
                                         <td class="text-secondary">
                                             <p v-for="line in item.comments.split('\\n')">{{ line }}</p>

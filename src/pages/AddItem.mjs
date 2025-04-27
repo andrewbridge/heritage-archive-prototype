@@ -18,7 +18,7 @@ const getNewItemId = () => {
     return match ? `${match[1]}${String(parseInt(match[2]) + 1).padStart(4, '0')}` : 'A0000';
 }
 
-const createItem = () => reactive({ id: '', folder: '', title: '', description: '', keywords: [''], timestamp: '', comments: '' });
+const createItem = () => reactive({ id: '', folder: '', title: '', description: '', keywords: [''], timestamp: '', type: '', comments: '' });
 
 const fetchOrCreateItem = (id) => {
     const item = createItem();
@@ -134,6 +134,14 @@ export default {
                                             <div class="row g-2 mb-3">
                                                 <div class="col-4">
                                                     <input type="text" class="form-control" placeholder="Time and date" v-model="item.timestamp" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Type</label>
+                                            <div class="row g-2 mb-3">
+                                                <div class="col-4">
+                                                    <input type="text" class="form-control" placeholder="Type" v-model="item.type" />
                                                 </div>
                                             </div>
                                         </div>
